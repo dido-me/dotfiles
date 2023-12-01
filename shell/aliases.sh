@@ -7,6 +7,8 @@ alias ll="ls -l"
 alias la="ls -la"
 alias ~="cd ~"
 alias dotfiles='cd $DOTFILES_PATH'
+alias tc="cd ~/Touch-Consulting"
+alias dido="cd ~/Dido"
 
 # Git
 alias gaa="git add -A"

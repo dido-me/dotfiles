@@ -27,24 +27,31 @@ export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
-path=(
-	"$HOME/bin"
-	"$DOTLY_PATH/bin"
-	"$DOTFILES_PATH/bin"
-	"$JAVA_HOME/bin"
-	"$GEM_HOME/bin"
-	"$GOPATH/bin"
-	"$HOME/.cargo/bin"
-	"/usr/local/opt/ruby/bin"
-	"/usr/local/opt/python/libexec/bin"
-	"/opt/homebrew/bin"
-	"/usr/local/bin"
-	"/usr/local/sbin"
-	"/bin"
-	"/usr/bin"
-	"/usr/sbin"
-	"/sbin"
-	"$path"
+export path=(
+  "$HOME/bin"
+  "$DOTLY_PATH/bin"
+  "$DOTFILES_PATH/bin"
+  "$JAVA_HOME/bin"
+  "$GEM_HOME/bin"
+  "$GOPATH/bin"
+  "$HOME/.cargo/bin"
+  "$HOME/.orbstack/bin"
+  "$HOME/dotnet"
+  "/opt/homebrew/opt/ruby/bin"
+  "/opt/homebrew/opt/node@14/bin"
+  "/opt/homebrew/opt/python@3.12/libexec/bin"
+  "/opt/homebrew/bin"
+  "/opt/homebrew/sbin"
+  "/usr/local/bin"
+  "/bin"
+  "/usr/bin"
+  "/usr/sbin"
+  "/sbin"
 )
 
-export path
+export DOTNET_ROOT=$HOME/dotnet
+
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
