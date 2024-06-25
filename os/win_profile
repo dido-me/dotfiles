@@ -1,0 +1,49 @@
+oh-my-posh init pwsh --config 'C:\Users\bitan\AppData\Local\Programs\oh-my-posh\themes\di4am0nd.omp.json' | Invoke-Expression
+Import-Module Terminal-Icons
+Import-Module PSReadLine
+Import-Module posh-git
+Import-Module syntax-highlighting
+
+function ll {
+    Get-ChildItem
+}
+
+function la {
+    Get-ChildItem -Force
+}
+
+Set-Variable -Name '~' -Value $HOME -Scope Global
+
+Set-Alias delFile Remove-Item
+function delDir { param($path) Remove-Item -Path $path -Recurse -Force }
+Set-Alias delDir delDir
+
+
+# Función para abrir Visual Studio Code en el directorio actual
+function c. {
+    code .
+}
+
+# Función para abrir Visual Studio Code con un archivo o directorio especificado
+function c {
+    param(
+        [string]$path = ""
+    )
+    if ($path -eq "") {
+        code .
+    } else {
+        code $path
+    }
+}
+
+function copyclip { $input | Set-Clipboard }
+
+function GoUp {
+    Set-Location ..
+}
+
+Set-Alias .. GoUp
+
+function glog {
+    git pretty 
+}
